@@ -1,3 +1,33 @@
+# 🎓 Trabajo Práctico: Programación Extrema (XP)
+* **Estudiante:** Tiziana Ochoa  
+* **Carrera:** Tecnicatura en Programación Full Stack — Universidad Provincial de Córdoba (UPC)  
+* **Materia:** Programación Extrema  
+* **Profesor:** Narciso Pérez  
+* **Proyecto:** Smart-Shopper (Mejoras e Integración de Nuevas Funcionalidades)
+
+---
+
+## 📌 Explicación de la Actividad y Mejora Integrada
+
+### 📝 Consigna de la Actividad
+La actividad consistió en tomar un repositorio base de la aplicación **Smart-Shopper** y aplicar los principios y metodologías de **Programación Extrema (XP)** para desarrollar una mejora incremental y de alto valor.
+
+### 🚀 Funcionalidad Implementada: Regla 6.1 - Control de Presupuesto y Estimación de Totales
+Se desarrolló un módulo completo para el control de presupuesto y sumatoria dinámica de las listas de compras.
+
+#### ⚙️ ¿Qué se agregó y cómo funciona?
+1. **Lógica desacoplada (`src/utils/budget.ts`):** 
+   - `calculateListTotal(items)`: Calcula automáticamente el total acumulado de la lista multiplicando el precio de cada producto por su cantidad ($precio \times cantidad$).
+   - `isBudgetExceeded(total, budget)`: Evalúa si la suma total supera el presupuesto máximo límite asignado a la lista, retornando un estado de alerta (`true`/`false`).
+2. **Desarrollo Guiado por Pruebas (TDD):**
+   - Se creó la suite de pruebas unitarias en `src/__tests__/rule-6.1-budget-calculator.spec.ts` utilizando **Vitest**.
+   - Se siguió estrictamente el ciclo XP/TDD: **Red** (escritura de tests que fallan) $\rightarrow$ **Green** (implementación del código justo y necesario para hacerlos pasar) $\rightarrow$ **Refactor** (limpieza y desacoplamiento en un módulo utilitario).
+3. **Integración Continua y Calidad de Código:**
+   - Control de versiones incremental mediante ramas (`feature/control-presupuesto`).
+   - Automatización de formato y linter previa a cada commit mediante hooks de **Husky** (ESLint + Prettier).
+
+---
+
 # 🛒 Smart Shopping List
 
 [![CI Status](https://github.com/Cas0570/Smart-Shopper/workflows/CI/badge.svg)](https://github.com/Cas0570/Smart-Shopper/actions)
